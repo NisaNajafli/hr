@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+:root{
+    --main-color: #1d3e6f;
+    --main-color-2: #132745;
+    --b-radius: 22px
+}
+* {
+    font-family: "Roboto", sans-serif !important;
+}
+.container{
+    padding: 0 180px;
+    margin: 0 auto 0 auto;
+}
+header{
+    background-color: #fff;
+    padding: 30px 0;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+#logo img{
+    height: auto;
+    max-width: 126px;
+    width: 100%;
+    object-fit: cover;
+}
+.menu-item{
+    display: flex;
+    gap: 40px;
+}
+.menu-link {
+  position: relative;
+  color: #333;
+  font-size: 16px;
+  text-decoration: none;
+  transition: 0.4s ease;
+}
+
+
+.menu-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, var(--main-color), #517e88);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.menu-link:hover::after {
+  transform: scaleX(1);
+}
+
+#nav-button{
+    text-decoration: none;
+    color: var(--main-color);
+    font-size: 12px;
+    border: 1px solid var(--main-color-2);
+    border-radius: 1em;
+    padding: 10px 20px;
+    font-weight: 500;
+    transition: .5s ease;
+}
+#nav-button:hover{
+    background: var(--main-color-2);
+    color: #fff;
+    transform: scale(1.05);
+}
+.banner-content{
+    padding: 30px auto;
+    display:flex;
+    justify-content:space-between;
+
+}
+
+.banner-left{
+  background:#a1b4d03f;
+  border-radius:var(--b-radius);
+  padding:40px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  box-shadow:0 4px 20px 6px rgba(0,0,0,.08);
+  width: 66%;
+
+}
+
+.banner-left h2{
+  font-size: 48px;
+  font-weight: 700;
+  color:#333;
+  line-height:1.4;
+  margin-bottom:20px;
+}
+.banner-left h2 span{ color:var(--main-color); }
+
+.banner-left p{
+  font-size: 18px;
+  color:#666;
+  margin-bottom:30px;
+}
+
+.cssbuttons-io-button {
+  background: #132745;
+  color: white;
+  padding: 1.6em;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 1.5em;
+  border: none;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0 0 1.6em -0.6em var(--main-color);
+  overflow: hidden;
+  position: relative;
+  height: 2.8em;
+  padding-right: 3.3em;
+  cursor: pointer;
+  width: 30%;
+}
+
+.cssbuttons-io-button .icon {
+  background: white;
+  margin-left: 1em;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.2em;
+  width: 2.2em;
+  border-radius: 1em;
+  box-shadow: 0.1em 0.1em 0.6em 0.2em var(--main-color);
+  right: 0.3em;
+  transition: all 0.3s;
+}
+
+.cssbuttons-io-button:hover .icon {
+  width: calc(100% - 0.6em);
+}
+
+.cssbuttons-io-button .icon svg {
+  width: 1.1em;
+  transition: transform 0.3s;
+  color: #7b52b9;
+}
+
+.cssbuttons-io-button:hover .icon svg {
+  transform: translateX(0.1em);
+}
+
+.cssbuttons-io-button:active .icon {
+  transform: scale(0.95);
+}
+
+.banner-right{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+  width: 33%;
+}
+
+.img-card{
+  position:relative;
+  overflow:hidden;
+  border-radius:var(--b-radius);
+}
+.img-card img{
+  width:100%;
+  height:150px;
+  object-fit:cover;
+  border-radius:var(--b-radius);
+}
+.img-card img,
+.overlay {
+  transition: all .4s ease;
+}
+
+.img-card:hover img {
+  transform: scale(1.05);
+}
+
+.img-card:hover .overlay {
+  background-color: rgba(29, 62, 111, 0.4); 
+}
+.card-text{
+  position:absolute;
+  left:20px;
+  bottom:20px;
+  color:#fff;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 30;
+
+}
+.card-text h4{
+  font-size:13px;
+  padding: 5px;
+  font-weight: 500;
+  border-radius: var(--b-radius);
+  background-color: #fff;
+  color: var(--main-color);
+  text-align: center;
+}
+.card-text p{
+  font-size:14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.card-text span{
+    font-weight: 700;
+}
+.overlay{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #1d3e6fab;
+    z-index: 20;
+    top: 0;
+}
