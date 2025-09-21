@@ -486,89 +486,14 @@ nav {
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-/* .compare__section {
-  background: #fff;
-  padding: 40px 0;
-  color: #333;
-}
 
-.compare__section-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center
-}
-
-.compare__section-content h2 {
-  text-align: center;
-  font-size: 32px;
-  font-weight: 700;
-  color: var(--main-color-2);
-  position: relative;
-  margin-bottom: 40px;
-}
-
-.compare-header {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  background: var(--main-color-2);
-  text-align: center;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #fff;
-  padding: 15px 0;
-  border-radius: var(--b-radius) var(--b-radius) 0 0;
-  width: 100%;
-}
-
-.col-title {
-  font-size: 18px;
-}
-
-.compare-body {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  background: #a1b4d03f;
-  border-radius: 0 0 var(--b-radius) var(--b-radius);
-  margin-bottom: 20px;
-}
-
-.col {
-  padding: 30px;
-  border-right: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.col:last-child {
-  border-right: none;
-}
-
-.col ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.col li {
-  margin-bottom: 15px;
-  line-height: 1.5;
-}
-
-.compare-footer {
-  margin-top: 20px;
-  text-align: center;
-  font-size: 16px;
-}
-
-.compare-footer strong {
-  color: var(--main-color);
-}
- */
 
 :root{
   --main-color:#1d3e6f;
   --accent:#127b92;
 }
 
-/* Bölmənin arxa planına yumşaq gradient və azca “glow” */
+
 .compare__section{
   margin-bottom:40px;
   background:linear-gradient(135deg, #f8fafc 0%, #eef3f6 100%);
@@ -592,7 +517,6 @@ nav {
   100%{transform:rotate(360deg);}
 }
 
-/* Grid */
 .compare__section-content{
   display:grid;
   grid-template-columns:repeat(2,1fr);
@@ -601,7 +525,6 @@ nav {
   z-index:2;
 }
 
-/* ---- Card ---- */
 .compare__section-card{
   position:relative;
   display:flex;
@@ -616,7 +539,7 @@ nav {
     box-shadow .5s cubic-bezier(.4,0,.2,1);
 }
 
-/* Animated gradient border */
+
 .compare__section-card::after{
   content:"";
   position:absolute;
@@ -638,13 +561,12 @@ nav {
   100%{background-position:0% 50%;}
 }
 
-/* Hover efektləri */
 .compare__section-card:hover{
   transform:translateY(-12px) scale(1.02);
   box-shadow:0 20px 40px rgba(0,0,0,.15);
 }
 
-/* Ağ kart */
+
 .compare__section-card:first-child{
   background:#fff;
   color:var(--main-color);
@@ -653,7 +575,6 @@ nav {
   fill:var(--main-color);
 }
 
-/* Tünd (main-color) kart */
 .compare__section-card:last-child{
   background:var(--main-color);
   color:#fff;
@@ -662,7 +583,7 @@ nav {
   fill:#fff;
 }
 
-/* Başlıqlar */
+
 .compare__section-card h2{
   font-size:26px;
   font-weight:700;
@@ -675,8 +596,14 @@ nav {
   border:none;
   height:2px;
   width:100%;
-  background:currentColor;
   opacity:.6;
+}
+.compare__section-card:first-child hr {
+  background: var(--main-color);
+}
+
+.compare__section-card:last-child hr {
+  background: #fff;
 }
 .compare__section-card-content{
   display:flex;
@@ -704,7 +631,6 @@ nav {
   transform:scale(1.2) rotate(-8deg);
 }
 
-/* Alt not */
 .compare__note{
   margin-top:40px;
   padding:25px 30px;

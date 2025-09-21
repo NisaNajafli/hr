@@ -17,6 +17,7 @@ window.addEventListener("scroll", () => {
 
 var mainDiv = document.getElementById('main-button');
 mainDiv.addEventListener('click', function(){
-  this.children.item(0).classList.toggle('fa-times');
+  this.children.item(0).classList.toggle('fa-xmark');
   this.classList.toggle('open');
 });
+
