@@ -15,9 +15,9 @@ window.addEventListener("scroll", () => {
   }
 });
 
-var mainDiv = document.getElementById('main-button');
-mainDiv.addEventListener('click', function(){
-  this.children.item(0).classList.toggle('fa-xmark');
+const mainButton = document.getElementById('main-button');
+
+mainButton.addEventListener('click', function () {
   this.classList.toggle('open');
 });
 // document.addEventListener("DOMContentLoaded", () => {

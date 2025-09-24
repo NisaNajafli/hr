@@ -699,6 +699,9 @@ nav {
   bottom: 20px;
   z-index: 0;
 }
+#main-button .icon-close { display: none; }
+#main-button.open .icon-mail { display: none; }
+#main-button.open .icon-close { display: block; }
 
 
 #main-button {
