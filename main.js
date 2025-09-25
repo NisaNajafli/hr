@@ -86,11 +86,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const isOpen = sol.classList.contains("active");
 
-      // close all
       problems.forEach(p => p.classList.remove("active"));
       solutions.forEach(s => s.classList.remove("active"));
-
-      // open only if it wasn't already open
       if (!isOpen) {
         problem.classList.add("active");
         sol.classList.add("active");
@@ -99,6 +96,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
-
+document.getElementById('year').textContent = new Date().getFullYear();
 
 
