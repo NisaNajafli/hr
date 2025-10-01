@@ -112,3 +112,18 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const cards = document.querySelectorAll(".spec-card");
+
+  cards.forEach(card => {
+    const btn = card.querySelector(".specialization-btn");
+    btn.addEventListener("click", () => {
+      card.classList.toggle("active");
+      btn.textContent = card.classList.contains("active") 
+        ? "СКРЫТЬ" 
+        : "ПОСМОТРЕТЬ";
+    });
+  });
+});
