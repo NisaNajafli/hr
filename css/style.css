@@ -1641,22 +1641,26 @@ footer hr{
 @media (max-width: 1200px){
   .banner-left{
     width: 60%;
+    position: relative;
+    z-index: 2;
   }
   .banner-left h2{
-    font-size: 36px !important;
+    font-size: 32px !important;
   }
   .banner-left p{
     width: 95%;
+    font-size: 17px;
   }
   .banner-right{
-    width: 40%;
+    width: 44%;
   }
   .eyebrow{
-    width: 80%;
+    width: 90%;
   }
   .cssbuttons-io-button{
-    width: 60%;
+    width: 70%;
   }
+  
 }
 
 
