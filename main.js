@@ -71,31 +71,37 @@ mainButton.addEventListener('click', function () {
 //     });
 //   });
 // });
-document.addEventListener("DOMContentLoaded", () => {
-  const problems  = document.querySelectorAll(".problems .problem");
-  const solutions = document.querySelectorAll(".solutions .solution");
+ document.addEventListener('click', function(e){
+    const btn = e.target.closest('.problem-card__toggle');
+    if(!btn) return;
 
-  problems.forEach((problem, i) => {
-    const btn = problem.querySelector(".cssbuttons-io-button");
-    if (!btn) return;
+    const id = btn.getAttribute('data-target');
+    const card = document.getElementById(id);
+    const body = card.querySelector('.problem-card__body');
 
-    btn.addEventListener("click", (e) => {
-      e.stopPropagation();
-      const sol = solutions[i];
-      if (!sol) return;
+    // Если уже раскрыта — сворачиваем
+    if(card.classList.contains('expanded')){
+      // возвращаем стартовую высоту
+      body.style.height = 'var(--collapsed-h)';
+      card.classList.remove('expanded');
+      btn.textContent = 'Развернуть';
+      return;
+    }
 
-      const isOpen = sol.classList.contains("active");
+    // раскрываем до фактической высоты контента
+    // временно ставим auto, чтобы измерить
+    const prev = body.style.height;
+    body.style.height = 'auto';
+    const full = body.scrollHeight + 'px';
+    body.style.height = prev || 'var(--collapsed-h)';
 
-      problems.forEach(p => p.classList.remove("active"));
-      solutions.forEach(s => s.classList.remove("active"));
-      if (!isOpen) {
-        problem.classList.add("active");
-        sol.classList.add("active");
-        sol.scrollIntoView({ behavior: "smooth", block: "center" });
-      }
+    // в следующем тике запускаем анимацию высоты
+    requestAnimationFrame(() => {
+      card.classList.add('expanded');
+      body.style.height = full;
+      btn.textContent = 'Свернуть';
     });
   });
-});
 document.getElementById('year').textContent = new Date().getFullYear();
 
 document.addEventListener('DOMContentLoaded', function () {

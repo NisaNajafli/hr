@@ -5,12 +5,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Сильный бизнес</title>
 </head>
 
 <body>
+<div class="modal fade" id="formModal" tabindex="-1" aria-labelledby="formModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-title-wrapper">
+          <h5 class="modal-title">Мы с вами свяжемся</h5>
+          <span class="modal-line"></span>
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <input type="text" class="form-control form-input" id="name" placeholder="Ваше имя" >
+          </div>
+          <div class="mb-3">
+            <input type="tel" class="form-control form-input" id="phone" placeholder="Ваш номер телефона">
+          </div>
+          <div class="mb-3">
+            <input type="email" class="form-control form-input" id="mail" placeholder="Ваш e-mail">
+          </div>
+          <div class="mb-3">
+            <textarea class="form-control form-input" id="notes" rows="3" placeholder="Ваше сообщение"></textarea>
+          </div>
+          <button type="submit" class="btn form-btn">Отправить</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
     <header id="site-header">
         <nav class="container">
             <a id="logo" href="">
@@ -24,7 +57,10 @@
                     <li><a class="menu-link" href="">Lorem</a></li>
                 </ul>
             </div>
-            <a id="nav-button" href="">Получить консультацию</a>
+            <a id="nav-button" href=""
+            data-bs-toggle="modal" data-bs-target="#formModal" >
+                Получить консультацию
+            </a>
         </nav>
     </header>
     <main>
@@ -114,8 +150,9 @@
                             сотрудника под ключ с гарантией возврата средств
                         </h2>
                         <p>Подбор + тестирование + обучение + адаптация с личным куратором </p>
-                        <button class="cssbuttons-io-button">
-                            ПОДОБРАТЬ РЕЗУЛЬТАТИВНОЕ И ВЫГОДНОЕ РЕШЕНИЕ
+                        <button class="cssbuttons-io-button" 
+                        data-bs-toggle="modal" data-bs-target="#formModal" >
+                            Подобрать выгодное решение
                             <div class="icon">
                                 <svg height="22" width="22" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M0 0h24v24H0z" fill="none"></path>
@@ -170,126 +207,89 @@
                         <li>Результат большинства сотрудников не выгоден для компании</li>
                     </ul>
                 </div>
+                <h2 class="page-title">КАК МЫ РЕШАЕМ ЭТИ ПРОБЛЕМЫ?</h2>
+                <div class="problems-grid">
+                    <!-- 1 -->
+                    <section class="problem-card" id="pc1">
+                        <div class="problem-card__title">1. Поиск хорошего кандидата</div>
+                        <div class="problem-card__inner">
+                        <div class="problem-card__body">
+                            <ul class="problem-card__list">
+                            <li>Результат труда должности</li>
+                            <li>Показатели результата труда (KPI)</li>
+                            <li>Проработка всех основных функций должности</li>
+                            <li>Личные характеристики кандидата </li>
+                            <li class="hl">Портрет идеального кандидата</li>
+                            <li class="hl">Анализ рынка труда</li>
+                            <li class="hl">Проработка системы оплаты труда</li>
+                            <li class="hl">Разработка цепляющего текста объявления</li>
+                            <li class="hl">Анализ источников размещения объявления</li>
+                            <li class="hl">Использование собственной базы кандидатов</li>
+                            <li class="hl">Исходящий активный поиск кандидатов с помощью прозвона.</li>
+                            </ul>
+                        </div>
+                        <span class="problem-card__toggle" data-target="pc1">Развернуть</span>
+                        </div>
+                    </section>
 
+                    <!-- 2 -->
+                    <section class="problem-card" id="pc2">
+                        <div class="problem-card__title">2. Отбор и отсев кандидатов</div>
+                        <div class="problem-card__inner">
+                        <div class="problem-card__body">
+                            <ul class="problem-card__list">
+                            <li>Первичный отбор на 1 этапе по телефону</li>
+                            <li>Интервью с кандидатом с глубокой проработкой</li>
+                            <li>Проверка результатов кандидата в работе и в жизни, его мотивация</li>
+                            <li class="hl">Проведение тестирования кандидата по 4 тестам:</li>
+                            <li class="hl">— Анализ характеристик личности: стабильность, оптимизм, самоконтроль, уверенность, активность, настойчивость, ответственность, понимание других, дружелюбие и общительность. Это базовые качества, которые напрямую определяют эффективность, надёжность и предсказуемость поведения человека в любой профессиональной ситуации.</li>
+                            <li class="hl">— Тест на мотивацию</li>
+                            <li class="hl">— Тест на IQ</li>
+                            <li class="hl">— Тест на эмоциональное состояние.</li>
+                            </ul>
+                        </div>
+                        <span class="problem-card__toggle" data-target="pc2">Развернуть</span>
+                        </div>
+                    </section>
 
-                <div class="problems">
-                    <div class="problem ">
-                        <h4 class="problem-title">
-                            1. Поиск хорошего кандидата
-                        </h4>
-                        <p>
-                            - Результат труда должности <br>
-                            - Показатели результата труда (KPI) <br>
-                            - Проработка всех основных функций должности<br>
-                            - Личные характеристики кандидата 
-                        </p>
-                             <button class="cssbuttons-io-button" id="problembutton">
-                                КАК МЫ РЕШАЕМ ЭТИ ПРОБЛЕМЫ?
-                                <div class="icon">
-                                    <svg
-                                     xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="22" height="22" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path fill="#1d3e6f" d="M13 4a1 1 0 1 0-2 0v13.586l-5.293-5.293a1 1 0 0 0-1.414 1.414l7 7a1 1 0 0 0 1.414 0l7-7a1 1 0 0 0-1.414-1.414L13 17.586z" opacity="1" data-original="#1d3e6f" class=""></path></g>
-                                    </svg>
-                                </div>
-                            </button>
-                    </div>
-                    <div class="problem">
-                        <h4 class="problem-title">
-                            2. Отбор и отсев кандидатов
-                        </h4>
-                        <p>
-                            - Первичный отбор на 1 этапе по телефону <br>
-                            - Интервью с кандидатом с глубокой проработкой <br>
-                            - Проверка результатов кандидата в работе и в жизни, его мотивация
+                    <!-- 3 -->
+                    <section class="problem-card" id="pc3">
+                        <div class="problem-card__title">3. Закрепление сотрудника на испытательном сроке</div>
+                        <div class="problem-card__inner">
+                        <div class="problem-card__body">
+                            <p>Разрабатываем <b>ИНДИВИДУАЛЬНУЮ ПРОГРАММУ АДАПТАЦИИ ПОД КОНКРЕТНУЮ ДОЛЖНОСТЬ</b>. Это документ с чётко прописанными шагами и заданиями, которые помогают новичку быстро и правильно влиться в рабочие процессы.</p>
+                            <ul class="problem-card__list">
+                            <li>Защищает и компанию, и сотрудника от неожиданных сложностей</li>
+                            <li>Делает процесс знакомства с организацией, её продуктами и услугами структурированным и прозрачным</li>
+                            <li>Позволяет с самого начала выстроить эффективное взаимодействие.</li>
+                            </ul>
+                            <p>На протяжении всей адаптации новичка сопровождает личный куратор, который помогает пройти этапы, корректирует и поддерживает.</p>
+                            <p>В итоге сотрудник быстрее закрепляется, приносит результат и остаётся в компании.</p>
+                        </div>
+                        <span class="problem-card__toggle" data-target="pc3">Развернуть</span>
+                        </div>
+                    </section>
 
-                        </p>
-                             <button class="cssbuttons-io-button" id="problembutton">
-                                КАК МЫ РЕШАЕМ ЭТИ ПРОБЛЕМЫ?
-                                <div class="icon">
-                                    <svg
-                                     xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="22" height="22" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path fill="#1d3e6f" d="M13 4a1 1 0 1 0-2 0v13.586l-5.293-5.293a1 1 0 0 0-1.414 1.414l7 7a1 1 0 0 0 1.414 0l7-7a1 1 0 0 0-1.414-1.414L13 17.586z" opacity="1" data-original="#1d3e6f" class=""></path></g>
-                                    </svg>
-                                </div>
-                            </button>
-                    </div>
-                    <div class="problem">
-                        <h4 class="problem-title">
-                            3. Закрепление сотрудника на испытательном сроке
-                        </h4>
-                        <p>
-                            Разрабатываем <strong>ИНДИВИДУАЛЬНУЮ ПРОГРАММУ АДАПТАЦИИ ПОД КОНКРЕТНУЮ ДОЛЖНОСТЬ</strong>. 
-                            Это документ с чётко прописанными шагами и заданиями, которые помогают новичку быстро и правильно влиться в рабочие процессы. 
-                        </p>
-                            <button class="cssbuttons-io-button" id="problembutton">
-                                КАК МЫ РЕШАЕМ ЭТИ ПРОБЛЕМЫ?
-                                <div class="icon">
-                                    <svg
-                                     xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="22" height="22" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path fill="#1d3e6f" d="M13 4a1 1 0 1 0-2 0v13.586l-5.293-5.293a1 1 0 0 0-1.414 1.414l7 7a1 1 0 0 0 1.414 0l7-7a1 1 0 0 0-1.414-1.414L13 17.586z" opacity="1" data-original="#1d3e6f" class=""></path></g>
-                                    </svg>
-                                </div>
-                            </button>
-                    </div>
-                    <div class="problem">
-                        <h4 class="problem-title">
-                            4. Быстрое получение желаемого результата от сотрудника
-                        </h4>
-                        <p>
-                            Разрабатываем <strong>ИНСТРУКЦИЮ ПО ПРОДУКТУ</strong> - это документ, в котором детально описаны обязанности по должности, порядок действий и критерии результата. Это готовая технология работы для конкретной роли. Благодаря ИПП:
-                        </p>
-                             <button class="cssbuttons-io-button" id="problembutton">
-                                КАК МЫ РЕШАЕМ ЭТИ ПРОБЛЕМЫ?
-                                <div class="icon">
-                                    <svg
-                                     xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="22" height="22" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path fill="#1d3e6f" d="M13 4a1 1 0 1 0-2 0v13.586l-5.293-5.293a1 1 0 0 0-1.414 1.414l7 7a1 1 0 0 0 1.414 0l7-7a1 1 0 0 0-1.414-1.414L13 17.586z" opacity="1" data-original="#1d3e6f" class=""></path></g>
-                                    </svg>
-                                </div>
-                            </button>
-                    </div>
-                </div>
-                <div class="solutions">
-                    <div class="solution">
-                        <p>
-                            - Портрет идеального кандидата <br>
-                            - Анализ рынка труда <br>
-                            - Проработка системы оплаты труда <br>
-                            - Разработка цепляющего текста объявления <br>
-                            - Анализ источников размещения объявление <br>
-                            - Использование собственной базы кандидатов <br>
-                            - Исходящий активный поиск кандидатов с помощью <span>прозвона</span>.
+                    <!-- 4 -->
+                    <section class="problem-card" id="pc4">
+                        <div class="problem-card__title">4. Быстрое получение желаемого результата от сотрудника</div>
+                        <div class="problem-card__inner">
+                        <div class="problem-card__body">
+                            <p>Разрабатываем <b>ИНСТРУКЦИЮ ПО ПРОДУКТУ</b> — это документ, в котором детально описаны обязанности по должности, порядок действий и критерии результата. Это готовая технология работы для конкретной роли. Благодаря ИПП:</p>
+                            <ul class="problem-card__list">
+                            <li>Сотрудник сразу понимает, что именно от него ждут и как правильно выполнять задачи</li>
+                            <li>Руководителю не нужно повторять одно и то же: документ задаёт единые правила и стандарты</li>
+                            <li>Инструкции по продукту экономят время на ввод в должность</li>
+                            <li>Снижается количество «устных договорённостей»</li>
+                            <li>Систематизируется работа</li>
+                            <li>Даёт прозрачный, объективный контроль</li>
+                            <li>Даже если сотрудник уходит, инструкции остаются в компании и позволяют быстро включить нового человека без потерь в качестве.</li>
+                            </ul>
+                        </div>
+                        <span class="problem-card__toggle" data-target="pc4">Развернуть</span>
+                        </div>
+                    </section>
 
-                        </p>
-                    </div>
-                    <div class="solution">
-                        <p>
-                            Проведение <strong>тестирования кандидата</strong> по 4 тестам: <br>
-                            - Анализ характеристик личности: стабильность, оптимизм, самоконтроль, уверенность, активность, настойчивость, ответственность, понимание других, дружелюбие и общительность. Это базовые качества, которые напрямую определяют эффективность, надёжность и предсказуемость поведения человека в любой профессиональной ситуации. <br>
-                            - Тест на IQ <br>
-                            - Тест на мотивацию <br>
-                            - Тест на эмоциональное состояние.
-
-                        </p>
-                    </div>
-                    <div class="solution">
-                        <p>
-                            - Защищает и компанию, и сотрудника от неожиданных сложностей <br>
-                            - Делает процесс знакомства с организацией, её продуктами и услугами структурированным и прозрачным <br>
-                            - Позволяет с самого начала выстроить эффективное взаимодействие. <br>
-                            - На протяжении всей адаптации новичка сопровождает <strong>личный куратор</strong>, который помогает пройти этапы, корректирует и поддерживает. <br>
-                            В итоге сотрудник быстрее закрепляется, приносит результат и остаётся в компании.
-
-                        </p>
-                    </div>
-                    <div class="solution">
-                        <p>
-                            - Сотрудник сразу понимает, что именно от него ждут и как правильно выполнять задачи <br>
-                            - Руководителю не нужно повторять одно и то же: документ задаёт единые правила и стандарты <br>
-                            - Инструкция по продукту экономит время на ввод в должность <br>
-                            - Снижает зависимость от «устных договорённостей» <br>
-                            - Систематизирует работу <br>
-                            - Даёт прозрачный инструмент контроля <br>
-                            Даже если сотрудник уходит, инструкция остаётся в компании и позволяет быстро включить нового человека без потерь в качестве.
-
-                        </p>
-                    </div>
                 </div>
             </div>
         </section>
@@ -397,7 +397,7 @@
                         Вы заранее понимаете, кого ищете, и не тратите время на «универсальных исполнителей». Это снижает риск ошибочного найма и позволяет отбирать только 
                         тех, кто реально подходит под ваши задачи и быстрее выйдет на результат.
                     </p>
-                    <a href="#" class="technologies-card-btn">УЗНАТЬ ПОДРОБНЕЕ</a>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#formModal" class="technologies-card-btn">УЗНАТЬ ПОДРОБНЕЕ</a>
                 </div>
                 <div class="technologies__section-card cardstyle1">
                     <h3>Собственная база кандидатов</h3>
@@ -421,7 +421,7 @@
                     <p>
                     Мы получаем только тех кандидатов, которые соответствуют портрету и действительно заинтересованы в вашей компании — это экономит время и сразу даёт выбор из тех, кто подходит под задачу.
                     </p>
-                    <a href="#" class="technologies-card-btn">УЗНАТЬ ПОДРОБНЕЕ</a>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#formModal" class="technologies-card-btn">УЗНАТЬ ПОДРОБНЕЕ</a>
                 </div>
                 <div class="technologies__section-card">
                     <div class="technologies-card-header">
@@ -434,7 +434,7 @@
                     <ul>
                         <li>Такой подход позволяет выявлять истинные драйверы кандидата, его отношение к работе и уровень ответственности.</li>
                     </ul>
-                    <a href="#" class="technologies-card-btn">УЗНАТЬ ПОДРОБНЕЕ</a>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#formModal" class="technologies-card-btn">УЗНАТЬ ПОДРОБНЕЕ</a>
                 </div>
 
                 <div class="technologies__section-card">
@@ -472,7 +472,7 @@
                     </li>
                 </ul>
 
-                <a href="#" class="technologies-card-btn">УЗНАТЬ ПОДРОБНЕЕ</a>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#formModal" class="technologies-card-btn">УЗНАТЬ ПОДРОБНЕЕ</a>
                 </div>
 
                 <div class="technologies__section-card">
@@ -492,7 +492,7 @@
                     <li>Тренируем основы самопрезентации и умение рассказывать о результатах.</li>
                     <li>Даём алгоритм «что важно сделать в первые недели, чтобы закрепиться».</li>
                 </ul>
-                <a href="#" class="technologies-card-btn">УЗНАТЬ ПОДРОБНЕЕ</a>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#formModal" class="technologies-card-btn">УЗНАТЬ ПОДРОБНЕЕ</a>
                 </div>
 
                 <div class="technologies__section-card">
@@ -514,7 +514,7 @@
                         чтобы снизить риск срыва на испытательном сроке.
                     </li>
                     </ul>
-                    <a href="#" class="technologies-card-btn">УЗНАТЬ ПОДРОБНЕЕ</a>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#formModal" class="technologies-card-btn">УЗНАТЬ ПОДРОБНЕЕ</a>
                 </div>
 
                 <div class="technologies__section-card">
@@ -534,7 +534,7 @@
                     <li>Инструкция остаётся в компании и становится <b>постоянным рабочим инструментом</b>.</li>
                     <li>Повышается эффективность всей команды: каждый работает по единым правилам, без разночтений и «самодеятельности».</li>
                     </ul>
-                    <a href="#" class="technologies-card-btn">УЗНАТЬ ПОДРОБНЕЕ</a>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#formModal" class="technologies-card-btn">УЗНАТЬ ПОДРОБНЕЕ</a>
                 </div>
 
                 <div class="technologies__section-card cardstyle2">
@@ -572,7 +572,7 @@
                     <p>
                         HR-аудит помогает превратить управление персоналом из догадок в факты: вы понимаете, где компания теряет эффективность, и получаете инструменты, чтобы это изменить.
                     </p>
-                    <a href="#" class="technologies-card-btn">УЗНАТЬ ПОДРОБНЕЕ</a>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#formModal" class="technologies-card-btn">УЗНАТЬ ПОДРОБНЕЕ</a>
                 </div>
 
                 <div class="technologies__section-card cardstyle1">
@@ -599,7 +599,7 @@
                 </div>
 
                 <div class="technologies-final">
-                    <a href="#" class="technologies-btn">ПОЛУЧИТЬ ПОДБОР ПО ТЕХНОЛОГИИ</a>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#formModal" class="technologies-btn">ПОЛУЧИТЬ ПОДБОР ПО ТЕХНОЛОГИИ</a>
                 </div>
             </div>
         </section>
@@ -633,8 +633,6 @@
                     <div class="spec-card__hidden">
                         <p>
                             Наши кандидаты проходят полную воронку отбора и обучение на <b>курсе «Менеджер по продажам» с личным куратором и проверкой заданий:</b> работа с воронкой, выявление потребностей, презентация, отработка возражений, завершение сделки. Также предоставляем <b>готовые регламенты по продажам,</b> которые становятся для сотрудника рабочим инструментом на каждый день. В них чётко описано, что делать в разных ситуациях: как отвечать на возражения, как фиксировать информацию после звонков и встреч, как готовить коммерческие предложения и отчёты. Благодаря этому менеджер не тратит время на догадки, а сразу действует по проверенному алгоритму
-                             <br> <b>Стоимость:</b> Х% от годового дохода сотрудника
-
                         </p>
                     </div>
                 </article>
@@ -663,7 +661,6 @@
                     <div class="spec-card__hidden">
                         <p>
                             Наши кандидаты проходят полную воронку отбора и обучение на <b>курсе «Бизнес-ассистент» с личным куратором и проверкой заданий.</b> Они учатся грамотно организовывать рабочий день руководителя, вести переписку, управлять задачами и документацией, внедрять инструменты контроля и систематизации. Дополнительно мы даём <b>регламенты</b>, которые описывают, как действовать в разных ситуациях: фиксировать поручения, готовить отчёты, контролировать выполнение. Благодаря этому ассистент приходит готовым и сразу начинает работать системно
-                              <br> <b>Стоимость:</b> Х% от годового дохода сотрудника
 
                         </p>
                     </div>
@@ -695,7 +692,6 @@
                     <div class="spec-card__hidden">
                         <p>
                             Наши кандидаты проходят полную воронку отбора и обучение на <b>курсе «HR- менеджер» с личным куратором и проверкой заданий,</b> где учатся формулировать требования к вакансии, находить и проверять кандидатов, проводить интервью, сопровождать адаптацию и вести отчётность. Дополнительно мы даём регламенты, инструкции, чек-листы этапов найма и проведения оперативок, шаблоны и др. Благодаря этому ваш HR работает по системе, а не на интуиции, и превращает процесс найма в управляемый инструмент роста компании 
-                            <br>  <b>Стоимость:</b> Х% от годового дохода сотрудника
 
                         </p>
                     </div>
@@ -733,7 +729,7 @@
                     от линейного персонала до управленцев, исходя из ваших конкретных потребностей.
                 </p>
 
-                <a href="#contact" class="about-btn">ПОЛУЧИТЬ ИНДИВИДУАЛЬНОЕ РЕШЕНИЕ</a>
+                <a href="#contact" data-bs-toggle="modal" data-bs-target="#formModal"  class="about-btn">ПОЛУЧИТЬ ИНДИВИДУАЛЬНОЕ РЕШЕНИЕ</a>
                 </div>
 
             </div>
@@ -965,7 +961,7 @@
                     </a>
                 </div>
                 <div class="footer-registration">
-                    <a href="">
+                    <a href="" data-bs-toggle="modal" data-bs-target="#formModal">
                     <svg
                     xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="33" height="33" x="0" y="0" viewBox="0 0 100 100" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M84.234 78.581C82.22 72.587 74.193 68.835 68.47 66.32c-2.242-.982-8.449-2.648-9.195-5.471-.267-1.017-.231-1.976-.012-2.895a5.596 5.596 0 0 1-1.057.105h-3.729a5.402 5.402 0 0 1-5.396-5.397c0-2.973 2.42-5.39 5.396-5.39h3.729c1.232 0 2.4.417 3.342 1.161a23.997 23.997 0 0 0 3.955-.866c1.631-3.417 2.903-7.503 3.188-11.02 1.217-15.048-8.008-23.852-21.235-22.33-9.617 1.107-15.362 8.278-15.983 17.51-.628 9.41 2.861 16.36 6.567 21.458 1.623 2.229 3.328 3.662 3.066 6.348-.304 3.176-3.7 4.061-6.129 5.037-2.878 1.156-5.978 2.91-7.442 3.721-5.043 2.785-10.578 6.139-11.822 10.727-2.755 10.168 6.549 13.248 14.23 14.67C36.535 94.904 43.968 95 50.082 95c11.059 0 30.945-.443 34.152-8.756.912-2.359.521-6.118 0-7.663z" fill="#304c76" opacity="1" data-original="#304c76" class=""></path><path d="M60.566 51.143a2.818 2.818 0 0 0-2.358-1.283h-3.729a2.81 2.81 0 1 0 0 5.618h3.729a2.786 2.786 0 0 0 2.479-1.519c5.199-.409 9.721-1.997 12.895-4.342.729.47 1.591.745 2.521.745h.234a4.687 4.687 0 0 0 4.688-4.693v-9.368a4.673 4.673 0 0 0-2.672-4.224C77.665 17.034 65.212 5 50 5S22.333 17.034 21.648 32.077a4.67 4.67 0 0 0-2.674 4.224v9.368a4.687 4.687 0 0 0 4.684 4.693h.237a4.688 4.688 0 0 0 4.687-4.693v-9.368a4.677 4.677 0 0 0-2.608-4.192C26.643 19.434 37.161 9.331 50 9.331c12.834 0 23.357 10.103 24.023 22.778a4.68 4.68 0 0 0-2.605 4.192v9.368c0 .622.121 1.201.334 1.742-2.732 1.955-6.709 3.348-11.186 3.732z" fill="#304c76" opacity="1" data-original="#000000" class=""></path></g>
                     </svg>
@@ -1002,7 +998,7 @@
         <div class="footer-final">
             <div class="footer-bottom container">
                 <p>Copyright © <span id="year"></span> </p>
-                <a href="">
+                <a href="https://jeywastudio.com/">
                     Разработка сайта и <br>
                     техническая поддержка — JEYWA STUDIO
                 </a>
@@ -1012,7 +1008,7 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://kit.fontawesome.com/6e8461733e.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <script src="main.js"></script>
 </body>
 
