@@ -102,6 +102,37 @@ mainButton.addEventListener('click', function () {
       btn.textContent = 'Свернуть';
     });
   });
+   document.addEventListener('click', function(e){
+    const btn = e.target.closest('.technologies-card__toggle');
+    if(!btn) return;
+
+    const id = btn.getAttribute('data-target');
+    const card = document.getElementById(id);
+    const body = card.querySelector('.technologies-card__body');
+
+    // Если уже раскрыта — сворачиваем
+    if(card.classList.contains('expanded')){
+      // возвращаем стартовую высоту
+      body.style.height = 'var(--collapsed-h-tech)';
+      card.classList.remove('expanded');
+      btn.textContent = 'Развернуть';
+      return;
+    }
+
+    // раскрываем до фактической высоты контента
+    // временно ставим auto, чтобы измерить
+    const prev = body.style.height;
+    body.style.height = 'auto';
+    const full = body.scrollHeight + 'px';
+    body.style.height = prev || 'var(--collapsed-h-tech)';
+
+    // в следующем тике запускаем анимацию высоты
+    requestAnimationFrame(() => {
+      card.classList.add('expanded');
+      body.style.height = full;
+      btn.textContent = 'Свернуть';
+    });
+  });
 document.getElementById('year').textContent = new Date().getFullYear();
 
 document.addEventListener('DOMContentLoaded', function () {
