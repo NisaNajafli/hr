@@ -440,7 +440,6 @@ nav {
   /* background: rgba(29, 62, 111, 0.59); */
   background-color:#9eafc7a5;
   color: #333;
-  font-weight: 600;
 }
 
 .stats-results .results .item {
@@ -451,7 +450,6 @@ nav {
 .stats-results .results .item.bottom {        
   background-color: #132d56cb;
   color: #fff;
-  font-weight: 700;
 }
 
 @media(max-width: 768px){
@@ -582,13 +580,13 @@ nav {
 .problem-solutions-title h2{
   position: relative;
   z-index: 1;
-  text-align:center;
-  font-size:30px;
+  font-size:20px;
   font-weight:700;
   color:var(--main-color);
   letter-spacing:1px;
   text-transform: uppercase;
   text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 0;
 }
 
 .problem-solutions-title p{
@@ -824,9 +822,9 @@ nav {
     --muted:#666;
     --shadow:0 4px 20px rgba(0,0,0,.08);
     --shadow-hover:0 10px 32px rgba(0,0,0,.15);
-    --fade-h:80px;
-    --collapsed-h:180px; /* стартовая видимая высота */
-    --collapsed-h-tech: 129px;
+       --fade-h: 33px;
+    --collapsed-h: 180px;
+    --collapsed-h-tech: 85px;
     --accent:#ff8a33;   /* оранжевый для выделений */
   }
 
@@ -1410,7 +1408,7 @@ nav {
   .technologies-card__toggle{
     display: inline-block;
     margin: 0px 0 0;
-    padding: 14px 18px;
+    padding: 14px 25px;
     background: var(--brand);
     color: #fff;
     font-weight: 500;
@@ -1419,7 +1417,7 @@ nav {
     cursor: pointer;
     user-select: none;
     text-align: center;
-    width: 25%;
+    width: fit-content;
     transition: background .2s 
 ease, transform .2s 
 ease;
